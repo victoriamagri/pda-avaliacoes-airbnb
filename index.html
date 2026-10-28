@@ -104,12 +104,12 @@ footer{text-align:center;color:var(--suave);font-size:12px;padding:0 16px 32px}
 <p class="lead">Todo comentário até 3,5 tem dono e destino em até 48 h, e a causa é fechada antes do próximo hóspede. Hoje a triagem existe, mas depende de ela rodar à mão e não acompanha se o conserto aconteceu.</p>
 <div class="tw"><table>
 <tr><th>Passo</th><th>O que acontece</th><th>Quem</th><th>Ferramenta que já existe</th></tr>
-<tr><td>1. Captar</td><td>Avaliações do dia entram classificadas por IA</td><td>Automático</td><td>Planilha Comentários 2026 (Nekt gold)</td></tr>
+<tr><td>1. Captar</td><td>Avaliações do dia entram na base</td><td>Automático</td><td>Nekt gold</td></tr>
 <tr><td>2. Triar</td><td>Parecer por comentário: ocorrência, manutenção, anúncio, contestação ou nada</td><td>Agente propõe, Victoria aprova</td><td><code>/triagem-comentarios-negativos</code></td></tr>
 <tr><td>3. Encaminhar</td><td>Manutenção para o Sapron, ocorrência para o app, anúncio para o suporte de Anúncios</td><td>Agente envia após o ok</td><td>Botões do case-cheer, Suporte Unificado</td></tr>
 <tr><td>4. Contestar</td><td>Avaliação fora das regras do Airbnb vai para contestação</td><td>Agente</td><td><code>/contestar-airbnb</code></td></tr>
 <tr><td>5. Fechar o ciclo</td><td>Conferir em 7 dias se o card foi concluído; se não, cobrar a franquia ou a área</td><td>Agente lista, time cobra</td><td><b>Falta criar</b> (leitura do Sapron por card)</td></tr>
-<tr><td>6. Reincidência</td><td>Imóvel com 2 detratores do mesmo tema em 30 dias vai para a pauta mensal da franquia</td><td>Agente sinaliza</td><td>VoC Risk Radar (hoje parado)</td></tr>
+<tr><td>6. Reincidência</td><td>Imóvel com 2 detratores do mesmo tema em 30 dias vai para a pauta mensal da franquia</td><td>Agente sinaliza</td><td>Monitores que já existem</td></tr>
 </table></div>
 <p>Regras da triagem que continuam valendo: anúncio ou comunicação da Seazone não é ocorrência; cobrança de dano, barulho e obra não geram nada; item faltando sem falha de atendimento é só manutenção.</p>
 <p>Um ponto que é da Seazone e precisa de dono fora da Qualidade:</p>
@@ -145,7 +145,7 @@ footer{text-align:center;color:var(--suave);font-size:12px;padding:0 16px 32px}
 <tr><th>Bloco</th><th>Conteúdo</th><th>De onde vem</th></tr>
 <tr><td>Nota</td><td>Airbnb 30 dias e trimestre, comparação com o mês anterior</td><td>Nekt (mesma base da <code>/notas-avaliacao</code>)</td></tr>
 <tr><td>Volume</td><td>Check-outs, pedidos de avaliação enviados, % de uso da ferramenta</td><td>Sapron <code>review_requested_at</code></td></tr>
-<tr><td>Detratores</td><td>Quantos, por tema, e quais imóveis repetem</td><td>Planilha Comentários 2026</td></tr>
+<tr><td>Detratores</td><td>Quantos, por tema, e quais imóveis repetem</td><td>Nekt gold</td></tr>
 <tr><td>Pendências</td><td>Manutenções abertas há mais de 7 dias, ocorrências do mês</td><td>Sapron, app de ocorrências</td></tr>
 <tr><td>Combinados</td><td>O que foi acordado na reunião anterior e se foi feito</td><td>Registro da reunião (falta definir onde)</td></tr>
 </table></div>
@@ -153,15 +153,13 @@ footer{text-align:center;color:var(--suave);font-size:12px;padding:0 16px 32px}
 
 <section id="reaproveitar">
 <h2>O que reaproveitar</h2>
-<p class="lead">Quase tudo que o PDA precisa já existe; o trabalho é ligar as peças num ciclo e destravar três que estão paradas.</p>
+<p class="lead">Quase tudo que o PDA precisa já existe; o trabalho é ligar as peças num ciclo e destravar as que estão paradas.</p>
 <div class="tw"><table>
 <tr><th>O que</th><th>Serve para</th><th>Estado hoje</th></tr>
-<tr><td>Planilha Comentários 2026</td><td>Base diária das avaliações com IA</td><td>No ar; a IA da planilha parou em 05/10</td></tr>
 <tr><td><code>/triagem-comentarios-negativos</code></td><td>Parecer de ocorrência e manutenção</td><td>No ar, roda à mão</td></tr>
 <tr><td><code>/contestar-airbnb</code></td><td>Contestar avaliações fora das regras</td><td>No ar; 2ª tentativa deu 0 de 33 em 19/10</td></tr>
 <tr><td><code>/notas-avaliacao</code> e <code>/kpi-qualidade</code></td><td>Notas do dia por conta e uso da ferramenta de avaliação</td><td>No ar; faltam cadastrar 9 KPIs</td></tr>
 <tr><td><code>/caca-ocorrencias</code></td><td>Achar falha de franquia que não virou ocorrência</td><td>No ar</td></tr>
-<tr><td>case-cheer: VoC Risk Radar e Health Index</td><td>Imóvel em risco antes do detrator</td><td>Parado desde 18/09</td></tr>
 <tr><td>case-cheer: Casos da UTI</td><td>Imóvel crítico com menos de 6 avaliações</td><td>No ar, aguardando o 1º caso</td></tr>
 <tr><td>Task force Airbnb (portal Colheita de Avaliações)</td><td>Franquia vê seus check-outs e marca quem pediu avaliação</td><td>Rotina das 9h; mensagens por tema dominante prontas</td></tr>
 <tr><td>Monitor das 30 franquias (outubro)</td><td>Base do painel das premium</td><td>Pronto para reaproveitar</td></tr>
@@ -186,8 +184,7 @@ footer{text-align:center;color:var(--suave);font-size:12px;padding:0 16px 32px}
 <ol>
 <li><b>Skill de fechamento de ciclo</b>: lê no Sapron os cards de manutenção abertos a partir de comentário e lista os que passaram de 7 dias.</li>
 <li><b>Skill do painel mensal da franquia</b>: junta nota, volume, detratores e pendências num HTML por franquia para a reunião.</li>
-<li><b>Alerta de reincidência</b>: imóvel com 2 detratores do mesmo tema em 30 dias (pode ser o VoC religado, sem criar outro).</li>
-<li><b>Religar a IA da planilha e o VoC</b>, antes de qualquer coisa nova.</li>
+<li><b>Alerta de reincidência</b>: imóvel com 2 detratores do mesmo tema em 30 dias.</li>
 </ol>
 </section>
 
@@ -229,7 +226,7 @@ footer{text-align:center;color:var(--suave);font-size:12px;padding:0 16px 32px}
 <p class="lead">Novembro é o mês de destravar o que está parado e fazer a primeira rodada com as premium; as skills novas entram na segunda quinzena.</p>
 <div class="tw"><table>
 <tr><th>Semana</th><th>Entrega</th></tr>
-<tr><td>03 a 07/11</td><td>Religar a IA da planilha e o VoC; definir o critério de premium; abrir as salas para não inscritos</td></tr>
+<tr><td>03 a 07/11</td><td>Definir o critério de premium; abrir as salas para não inscritos</td></tr>
 <tr><td>10 a 14/11</td><td>Primeira reunião mensal com as premium (três perguntas fixas); cadastrar os KPIs pendentes</td></tr>
 <tr><td>17 a 21/11</td><td>Skill de fechamento de ciclo no ar; pedido à Tecnologia do lembrete na tela Avaliações</td></tr>
 <tr><td>24 a 28/11</td><td>Skill do painel mensal no ar; primeiro fechamento do mês para a Rayanne</td></tr>
